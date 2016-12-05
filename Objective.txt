@@ -1,0 +1,3 @@
+Objective of the system is to design and develop a system in which all the
+documents will be stored in a central repository. Where the users will be able to organize
+and access those documents from any place and any time.

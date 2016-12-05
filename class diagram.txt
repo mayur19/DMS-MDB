@@ -1,0 +1,39 @@
+This is a design level class diagram. The topmost class DocumentManagementSystem
+is the main class which represents the full application. There are Admin, dms master and
+User classes which are connected to main class with aggregation means having whole/-
+part relationship, indicating that the DocumentManagementSystem is the whole class
+and above 3 classes are the part classes. Our aim is to keep admin and user sides dif-
+ferent so we have split them into two. The dms master is the MySQL database, it is
+basically the database name. The main class has the login function where the user name
+and password are the parameters. The Admin communicates with dms master to up-
+load files and to request files/documents. In the same way User also communicates with
+dms master, the only difference is user can access that data which Admin has given it
+the access to.
+The User class consists of EventUser class. The EventUser is so named because it
+represents that the users can upload documents related to event. They can access the
+documents event wise. They can upload files, photos, etc. They will be able to access
+those documents which they have uploaded and also those which they have right to ac-
+cess. These rights are given to them by the Admin. The event also will be assigned by
+the Admin to all users.
+The Admin is the one who has all rights. Admin can upload documents in any
+event and can view all the documents uploaded by the users. Admin can add and delete
+events using the EventAdmin class. Admin can assign events to users. Admin can list
+all event with their descriptions using the ListAdmin. Admin can add event along with
+their description. Like events Admin can also add and delete users using the UserAdmin
+class. Only Admin has the right to add users. Admin can view the list of users using
+ListUsers class. EventAdmin ListEvents and UserAdmin ListUsers are connected using
+realization relationship.
+Now the dms master is the name of the database. It has tables dms users, dms event,
+dms data master and dms data. The dms users consists of fields userid, username, full-
+name and password. This table consists all the users credentials necessary for them to
+access their accounts. In the main class when user enters account credentials then that
+username and password are compared from this table. When Admin adds a new user
+this entry is added to this table. The dms event table has the list of events. It consists
+of attributes eventid, eventname and description. Each event has an eventid associated 
+with it. The main table of all is the dms data master. When a new document is added
+to a particular event the corresponding eventid and userid are added to this table. Now
+this unique dmid is generated. This dmid is then added in dms data along with the file
+name that was uploaded. This file is physically present in a folder on the structure. The
+file name is only inserted in the dms table along with eventid and userid. The database
+is normalized means the redundancy in data is reduced. The dms data is dependent on
+dms data master so they are connected with dependency relationship. 

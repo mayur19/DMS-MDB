@@ -1,0 +1,23 @@
+Chapter 1: Introduction
+This chapter explains the introductory part of the document management system.
+First section discusses the aim of developing the system in brief stating the problem. Sec-
+ond section states the main objective of the system. Next section gives the future scope of
+project. Last section in this chapter elaborates the methodology of the underlying system.
+
+Chapter 2: Requirement Specification
+The requirements that are necessary for developing the system are specified in this
+chapter. This chapter starts by describing the literature survey that was conducted prior
+to the development. Further the motive behind the system implementation is defined. In
+the next section the background of the system is discussed. The system requirement is di-
+vided into two parts, one stating the hardware and other the software requirements.
+The languages and database are specified for both the web as well as android application.
+
+Chapter 3: System Design
+This chapter explains the design of architecture of the proposed system. First section
+includes all the features. Second section consists of the UML diagrams along with their
+descriptions.
+
+Chapter 4: System Implementation
+The implementation of the system including the system diagram and data flow
+diagram is given in this chapter. Also a section gives the GUI of the website consisting
+the screen shots with the explanation of each one.
