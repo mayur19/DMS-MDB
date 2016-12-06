@@ -1,12 +1,12 @@
 <?php
-    include("config.php");
+    include("../include/config.php");
     session_start();
 
     if (isset($_SESSION['user_id'])) {
         $user = $_SESSION['user_id'];
     }
     else{
-        header("location: index.html");
+        header("location: ../index.html");
     }
 
 if (isset($_POST['action'])) {
@@ -24,7 +24,7 @@ if (isset($_POST['action'])) {
     $sql1 = "SELECT dm_id FROM dms_data_master WHERE event_id='$event_id'";
     $result1 = mysqli_query($db,$sql1);
 }
-include("master.php");
+include("../include/master.php");
 
         $count = 0;
 

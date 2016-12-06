@@ -21,7 +21,11 @@
     background-color: #00a8e9;
     color: black;
 }
-
+#btn_upload{
+    background-color: #00a8e9;
+    color: black;
+    height: 40px;
+}
 #sample_button:hover {
 	background-color: #00a8e9;
 }
@@ -160,7 +164,6 @@ hr.style-4 {
 #browse_button {
     background-color: #00a8e9;
     color: black;
-    margin-top: 0px;
 }
 
 #browse_button:hover {
@@ -169,12 +172,12 @@ hr.style-4 {
 
 #input_browse {
     border:1px solid #e9e9e9;
+    margin-top:15px;
 }
 
 #welcome_username {
     margin-top: 20px;
 }
-
 
 #drop {
     padding-left:15px; 
@@ -218,4 +221,21 @@ td, th {
 
 tr:nth-child(even) {
     background-color: #dddddd;
+}
+#disImg{
+    height: 150px;
+    width: 150px;
+}
+
+@media only screen and (min-width:1024px){
+
+    .menu_text { display: block; }
+    .menu_icon { display: none; }
+
+}
+@media only screen and (max-width:480px){
+
+    .menu_text { display: none; }
+    .menu_icon { display: block; }
+
 }

@@ -1,5 +1,5 @@
 <?php
-	include("config.php");
+	include("../include/config.php");
     session_start();
   
   	$username = $_POST['username'];
@@ -9,6 +9,6 @@
     $sql = "INSERT INTO dms_users (username,password,fullname) VALUES ( '$username','$password','$fullname' )";
     $result = mysqli_query($db,$sql);
 
-    echo "<script>alert('User added successfully.'); location.href=\"admin_home.php\"; </script>";
+    echo "<script>alert('User added successfully.'); location.href=\"../admin/admin_home.php\"; </script>";
 
 ?>

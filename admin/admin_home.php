@@ -1,14 +1,14 @@
 <?php
-    include("config.php");
+    include("../include/config.php");
     session_start();
 
     if (isset($_SESSION['user_id'])) {
         
     }
     else{
-        header("location: index.html");
+        header("location: ../index.html");
     }
-include("master.php");
+include("../include/master.php");
 $sql = "SELECT eventname FROM dms_event";
     $result = mysqli_query($db,$sql);
     while($row = mysqli_fetch_assoc($result)) { 

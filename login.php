@@ -1,5 +1,5 @@
 <?php
-   include("config.php");
+   include("include/config.php");
    session_start();
    
    if($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -22,13 +22,13 @@
          if ($myusername=="admin") {
             $_SESSION['user_id'] = $row['user_id'];
             $_SESSION['username'] = $myusername;
-            header("location: admin_home.php");   
+            header("location: admin/admin_home.php");
          }
          else{
             //session_register("myusername");
             $_SESSION['user_id'] = $row['user_id'];
             $_SESSION['username'] = $myusername;
-            header("location: home.php");
+            header("location: user/home.php");
          }
       }else {
          //$error = "Your Login Name or Password is invalid";

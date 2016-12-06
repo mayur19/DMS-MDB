@@ -1,15 +1,14 @@
 <?php
-    include("config.php");
+    include("../include/config.php");
     session_start();
 
     if (isset($_SESSION['user_id'])) {
         
     }
     else{
-        header("location: index.html");
+        header("location: ../index.html");
     }
-
-    if (isset($_POST['action'])) {
+     if (isset($_POST['action'])) {
     
     $eventname = mysqli_real_escape_string($db,$_POST['submit']);
     //echo $eventname;
@@ -21,12 +20,11 @@
     $_SESSION['event_id'] = $row['event_id'];
     $event_id = $_SESSION['event_id'];
 }
-include("user_master.php");
+include("../include/master.php");
 ?>
-
 <div class="col-xs-6">
    
-        <form action="upload_action.php" method="post" enctype="multipart/form-data">
+        <form action="admin_upload_action.php" method="post" enctype="multipart/form-data">
 
                 <div class="form-group">
                     <input type="file" name="fileToUpload" class="file hidden">
@@ -53,5 +51,3 @@ $(document).on('change', '.file', function(){
   $(this).parent().find('.form-control').val($(this).val().replace(/C:\\fakepath\\/i, ''));
 });
 </script>
-
-</html>

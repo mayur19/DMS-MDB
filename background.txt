@@ -1,7 +1,0 @@
-A document management system for organization is a system used to manage and store
-documents and reduce manual storage. If any such system were not implemented people
-would have to preserve all the documents manually and when with time the number of
-files would have increased the management of all the files would have become a tedious
-job. Thus with the help of document management system users will be able to store all
-the documents in a central data repository and access them whenever the need be and from
-any place.

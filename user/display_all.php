@@ -1,13 +1,15 @@
 <?php
-    include("config.php");
+    include("../include/config.php");
     session_start();
 
     if (isset($_SESSION['user_id'])) {
         $user = $_SESSION['user_id'];
     }
     else{
-        header("location: index.html");
+        header("location: ../index.html");
     }
+include("../include/user_master.php");
+include("../include/user_upload.php");
 
 if (isset($_POST['action'])) {
     
@@ -27,21 +29,20 @@ if (isset($_POST['action'])) {
 
     $dm_id = $row1['dm_id'];
 }
-include("user_master.php");
-
+echo "<div class=row >";
 $sql3 = "SELECT * FROM dms_data WHERE dm_id='$dm_id'";
-        $retval3 = mysqli_query( $db,$sql3 );
-      $count = 0;
+$retval3 = mysqli_query( $db,$sql3 );
+    $count = 0;
         while($row = mysqli_fetch_assoc($retval3)) {
             //echo $row['filename'];
             if ($count==5) {
-                echo "<div class=row></div><div class=col-xs-2></div>";
+                echo "<div class=row></div>
+                        <div class=col-xs-2></div>";
             }
-            
-                echo "<div class=col-xs-2><a href='/DMS-MDB/uploads/" . $row['filename'] . "'>
-                    <img src='/DMS-MDB/uploads/".$row['filename']."' height='150' width='100%' />"
+            echo "<div class=col-xs-2 id='dispImg'><a href='../uploads/" . $row['filename'] . "'>
+                <img src='../uploads/".$row['filename']."' height='150' width='150' />"
                     .$row['filename']."</div>";
                 $count++;
             }
-
+echo "</div>";
 ?>

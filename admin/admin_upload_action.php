@@ -1,5 +1,5 @@
 <?php
-	include("config.php");
+	include("../include/config.php");
    	session_start();
 
    	$user = $_SESSION['user_id'];
@@ -32,7 +32,7 @@
       //$newname = "newname.pdf"; 
       //$target = 'uploads/'.$newname;
       
-      $target_dir = "uploads/";
+      $target_dir = "../uploads/";
       $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
       
       move_uploaded_file( $_FILES["fileToUpload"]["tmp_name"], $target_file);
@@ -52,6 +52,6 @@
 
 
       //echo "<h3 align='center'>Upload successful.</h3> <script>setTimeout(\"location.href = 'home.php';\",2500);</script>";
-      echo "<script>alert('Upload successful.'); location.href=\"home.php\"; </script>";
+      echo "<script>alert('Upload successful.'); location.href=\"../admin/admin_home.php\"; </script>";
 ?>
 

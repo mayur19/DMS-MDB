@@ -1,7 +1,7 @@
 <?php 
-	include("config.php");
+	include("include/config.php");
 	session_start();
 	session_destroy();
-	mysql_close($db);
+	mysqli_close($db);
 	header("location: index.html");
  ?>
