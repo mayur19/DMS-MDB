@@ -36,8 +36,9 @@
             <form class="navbar-form navbar-left" role="search">
                 <div class="form-group">
                     <input type="text" class="form-control" placeholder="Search">
+                    <button type="submit" class="btn btn-default">Submit</button>
                 </div>
-                <button type="submit" class="btn btn-default">Submit</button>
+
             </form>
         </div>
         <div class="col-xs-2">
@@ -53,9 +54,9 @@
 
 </div>
 
-<nav class="navbar navbar-inverse sidebar" role="navigation">
+<nav class="navbar navbar-inverse sidebar"role="navigation">
     <div class="container-fluid">
-        <div class="navbar-header">
+        <div class="navbar-header" id="navSide">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-sidebar-navbar-collapse-1">
                 <span class="sr-only">Toggle navigation</span>
                 <span class="icon-bar"></span>
